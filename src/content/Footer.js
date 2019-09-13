@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Footer = () => {
     return (
         <FooterDiv>
-            Made with ❤ ️by <a href="https://jainilsutaria.com/">Jainil Sutaria</a>. Please suggest edits <a href="https://github.com/jsutaria/laser-cutter-settings">here</a>!
+            Made with ❤ ️by <a href="http://jainilsutaria.com/">Jainil Sutaria</a>. Please suggest edits <a href="https://github.com/jsutaria/laser-cutter-settings">here</a>!
         </FooterDiv>
     )
 }

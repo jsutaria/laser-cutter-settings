@@ -1,0 +1,50 @@
+[
+    {
+        "width": "0.25",
+        "material": "acrylic",
+        "settings": {
+            "power": "100",
+            "speed": "0.8"
+        }
+    },
+    {
+        "width": "0.173",
+        "material": "acrylic",
+        "settings": {
+            "power": "70",
+            "speed": "0.8"
+        }
+    },
+    {
+        "width": "0.125",
+        "material": "acrylic",
+        "settings": {
+            "power": "90",
+            "speed": "1.0"
+        }
+    },
+    {
+        "width": "0.25",
+        "material": "duron",
+        "settings": {
+            "power": "70",
+            "speed": "0.8"
+        }
+    },
+    {
+        "width": "0.125",
+        "material": "duron",
+        "settings": {
+            "power": "70",
+            "speed": "1.5"
+        }
+    },
+    {
+        "width": "0.25",
+        "material": "plywood",
+        "settings": {
+            "power": "70",
+            "speed": "1.1"
+        }
+    }
+]

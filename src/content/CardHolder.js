@@ -6,9 +6,10 @@ import cut from '../cut.json'
 import engrave from '../engrave.json'
 
 const CardHolder = props => {
-    const { setting } = props;
-    const engraver_settings = setting === 'cut' ? cut : engrave;
-
+    const { setting, material, thickness } = props;
+    let engraver_settings = setting === 'cut' ? cut : engrave;
+    if (material !== 'null') engraver_settings = engraver_settings.filter(item => item.material === material);
+    if (thickness !== 'null') engraver_settings = engraver_settings.filter(item => item.width === thickness);
     return (
         <CardHolderDiv>
             {engraver_settings.map(element => {
@@ -28,8 +29,8 @@ const CardHolderDiv = styled.div`
 `
 
 const mapStateToProps = state => {
-    const { setting } = state.reduxProps;
-    return { setting };
+    const { setting, material, thickness } = state.reduxProps;
+    return { setting, material, thickness };
 }
 
 export default connect(mapStateToProps)(CardHolder)

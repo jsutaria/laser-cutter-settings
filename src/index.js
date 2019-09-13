@@ -12,9 +12,8 @@ ReactDOM.render(
         store={createStore(reducers, {
             reduxProps: {
                 setting: 'cut',
-                filters: {
-
-                }
+                material: 'null',
+                thickness: 'null'
             }
         })}
     >

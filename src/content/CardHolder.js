@@ -1,15 +1,21 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import styled from 'styled-components'
 import Card from './Card'
+import cut from '../cut.json'
+import engrave from '../engrave.json'
 
-const CardHolder = () => {
+const CardHolder = props => {
+    const { setting } = props;
+    const engraver_settings = setting === 'cut' ? cut : engrave;
+
     return (
         <CardHolderDiv>
-            <Card>Hi</Card>
-            <Card>Hi</Card>
-            <Card>Hi</Card>
-            <Card>Hi</Card>
-            <Card>Hi</Card>
+            {engraver_settings.map(element => {
+                const title = `${element.width} in - ${element.material}`
+                return <Card key={title} material={element}></Card>
+            }
+            )}
         </CardHolderDiv>
     )
 }
@@ -21,4 +27,9 @@ const CardHolderDiv = styled.div`
     width: 100%;
 `
 
-export default CardHolder
+const mapStateToProps = state => {
+    const { setting } = state.reduxProps;
+    return { setting };
+}
+
+export default connect(mapStateToProps)(CardHolder)

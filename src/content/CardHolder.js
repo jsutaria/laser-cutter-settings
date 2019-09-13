@@ -6,14 +6,19 @@ const CardHolder = () => {
     return (
         <CardHolderDiv>
             <Card>Hi</Card>
+            <Card>Hi</Card>
+            <Card>Hi</Card>
+            <Card>Hi</Card>
+            <Card>Hi</Card>
         </CardHolderDiv>
     )
 }
 
 const CardHolderDiv = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-flow: row wrap;
+    width: 100%;
 `
 
 export default CardHolder

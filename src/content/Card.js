@@ -10,9 +10,13 @@ const Card = props => {
 }
 
 const CardDiv = styled.div`
-    display: flex
-    width: 320px
-    height: 320px
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px
+    border: 1px solid black;
 `
 
 export default Card
